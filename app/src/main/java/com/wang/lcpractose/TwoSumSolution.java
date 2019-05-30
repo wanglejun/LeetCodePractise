@@ -1,6 +1,7 @@
 package com.wang.lcpractose;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by wanglejun on 19-5-29.
@@ -9,7 +10,7 @@ public class TwoSumSolution {
     //暴力解法 循环遍历
     public int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums.length; j++) {
+            for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
                     System.out.println("i====" + i + "====j====" + j);
                     return new int[]{i, j};
@@ -19,6 +20,7 @@ public class TwoSumSolution {
         return null;
     }
 
+    //hash 表
     public int[] twoSumHash(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -35,4 +37,5 @@ public class TwoSumSolution {
         }
         return null;
     }
+
 }
