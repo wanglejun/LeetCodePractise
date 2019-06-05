@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 2数之和
  * Created by wanglejun on 19-5-29.
  */
 public class TwoSumSolution {
