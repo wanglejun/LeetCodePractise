@@ -1,5 +1,7 @@
 package com.wang.lcpractose;
 
+import java.util.LinkedList;
+
 /**
  * Created by wanglejun on 19-5-29.
  */
