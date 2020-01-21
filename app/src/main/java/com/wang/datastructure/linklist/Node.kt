@@ -14,7 +14,7 @@ data class Node<T> constructor(var data: T, var next: Node<T>?) {
         return next
     }
 
-    fun setNextNode(data: Node<T>?) {
+    fun setNextNode(next: Node<T>?) {
         this.next = next
     }
 }
