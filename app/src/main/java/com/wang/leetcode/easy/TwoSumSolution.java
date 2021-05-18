@@ -1,4 +1,4 @@
-package com.wang.lcpractose;
+package com.wang.leetcode.easy;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +30,6 @@ public class TwoSumSolution {
 
         for (int i = 0; i < nums.length; i++) {
             int result = target - nums[i];
-
             if (map.containsKey(result) && map.get(result) != i) {
                 System.out.println("i====" + i + "====j====" + map.get(result));
                 return new int[]{i, map.get(result)};
@@ -39,4 +38,26 @@ public class TwoSumSolution {
         return null;
     }
 
+    //官方题解
+    public int[] twoSunmLeetCode(int[] nums, int target){
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if(map.containsKey(target - nums[i])){
+                return new int[]{map.get(target - nums[i]),i};
+            }
+            map.put(nums[i],i);
+        }
+        return new int[0];
+    }
+
+
+    public static void main(String[] args) {
+        int[] nums = {3, 4, 2};
+        char temps[] = new char[3];
+        TwoSumSolution twoSumSolution = new TwoSumSolution();
+        int[] indexs= twoSumSolution.twoSunmLeetCode(nums,6);
+        for (int i = 0; i < indexs.length; i++) {
+            System.out.println("int[]"+indexs[i]);
+        }
+    }
 }
