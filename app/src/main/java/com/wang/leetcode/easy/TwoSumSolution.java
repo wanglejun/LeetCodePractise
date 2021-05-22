@@ -53,43 +53,14 @@ public class TwoSumSolution {
     }
 
 
-    public static boolean isPalindrome(String s) {
-        int n = s.length();
-        int left = 0, right = n - 1;
-        while (left < right) {
-            System.out.println("i===11111111111======="+s.charAt(left));
-            System.out.println("i===11111111111==111====="+Character.isLetterOrDigit(s.charAt(left)));
-
-            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
-                System.out.println("i===22222222222=======");
-
-                ++left;
-            }
-            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
-                System.out.println("i===333333333=======");
-
-                --right;
-            }
-            if (left < right) {
-                if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) {
-                    return false;
-                }
-                ++left;
-                --right;
-            }
-        }
-        return true;
-    }
 
     public static void main(String[] args) {
-//        int[] nums = {3, 4, 2};
-//        char temps[] = new char[3];
-//        TwoSumSolution twoSumSolution = new TwoSumSolution();
-//        int[] indexs= twoSumSolution.twoSunmLeetCode(nums,6);
-//        for (int i = 0; i < indexs.length; i++) {
-//            System.out.println("int[]"+indexs[i]);
-//        }
-
-        isPalindrome("中国中国中国中国中国中");
+        int[] nums = {3, 4, 2};
+        char temps[] = new char[3];
+        TwoSumSolution twoSumSolution = new TwoSumSolution();
+        int[] indexs= twoSumSolution.twoSunmLeetCode(nums,6);
+        for (int i = 0; i < indexs.length; i++) {
+            System.out.println("int[]"+indexs[i]);
+        }
     }
 }
