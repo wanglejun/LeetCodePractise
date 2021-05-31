@@ -10,8 +10,20 @@ class RemoveDuplicates {
 
     companion object{
         fun removeDuplicates(nums: IntArray): Int {
-
-            return nums.size
+            var size = nums.size
+            if (size == 0){
+                return 0
+            }
+            var slow = 1
+            var fast = 1
+            while (fast<size){
+                if (nums[fast - 1] != nums[fast]){
+                    nums[slow] = nums[fast]
+                    slow++
+                }
+                fast++
+            }
+            return slow
         }
 
         @JvmStatic
