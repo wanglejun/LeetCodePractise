@@ -9,6 +9,7 @@ package com.wang.leetcode.easy
 class RemoveDuplicates {
 
     companion object{
+        //快慢双指针遍历
         fun removeDuplicates(nums: IntArray): Int {
             var size = nums.size
             if (size == 0){
